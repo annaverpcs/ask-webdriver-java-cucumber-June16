@@ -10,7 +10,7 @@ import static support.TestContext.getDriver;
 
 public class Hooks {
 
-   /* @Before(order = 0)
+  @Before(order = 0)
     public void scenarioStart() {
         TestContext.initialize();
         getDriver().manage().deleteAllCookies();
@@ -24,5 +24,5 @@ public class Hooks {
             scenario.embed(screenshot, "image/png");
         }
         TestContext.teardown();
-    }*/
+    }
 }

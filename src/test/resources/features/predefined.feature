@@ -6,7 +6,7 @@ Feature: Search Engine exercise
     Given I open url "https://google.com"
     Then I should see page title as "Google"
     Then element with xpath "//input[@name='q']" should be present
-    When I type "Behavior Driven Development" into element with xpath "//input[@name='q']"
+    When I type "Verification" into element with xpath "//input[@name='q']"
     Then I click on element using JavaScript with xpath "(//input[@name='btnK'])[1]"
     Then I wait for element with xpath "//*[@id='res']" to be present
     Then element with xpath "//*[@id='res']" should contain text "Cucumber"
@@ -29,18 +29,17 @@ Feature: Search Engine exercise
     Given I open url "https://swisscows.com"
     Then I should see page title contains "Swisscows"
     Then element with xpath "//input[@name='query']" should be present
-    When I type "Behavior Driven Development" into element with xpath "//input[@name='query']"
+    When I type "Verification" into element with xpath "//input[@name='query']"
     Then I click on element with xpath "//button[@class='search-submit']"
     Then I wait for element with xpath "//*[@class='web-results']" to be present
     Then element with xpath "//*[@class='web-results']" should contain text "Behavior Driven Development"
-
  # scenario for Duckduckgo
   @predefined4
   Scenario: Predefined steps for Duckduckgo
     Given I open url "https://duckduckgo.com"
     Then I should see page title contains "DuckDuckGo"
     Then element with xpath "//input[@id='search_form_input_homepage']" should be present
-    When I type "Behavior Driven Development" into element with xpath "//input[@id='search_form_input_homepage']"
+    When I type "Verification" into element with xpath "//input[@id='search_form_input_homepage']"
     Then I click on element with xpath "//input[@id='search_button_homepage']"
     Then I wait for element with xpath "//*[@class='cw']" to be present
     Then element with xpath "//*[@class='cw']" should contain text "Behavior Driven Development"
@@ -50,7 +49,7 @@ Feature: Search Engine exercise
     Given I open url "https://www.wiki.com"
     Then I should see page title as "Wiki.com"
     Then element with xpath "//input[@name='q']" should be present
-    When I type "Behavior Driven Development" into element with xpath "//input[@name='q']"
+    When I type "Verification" into element with xpath "//input[@name='q']"
     And I click on element with xpath "//input[@name='btnG']"
     Then I should see page title contains "Form is not secure"
     Then I click on element with xpath "//button[@id='proceed-button']"
@@ -58,6 +57,17 @@ Feature: Search Engine exercise
     Then I switch to iframe with xpath "//iframe[@name='googleSearchFrame']"
     Then I wait for element with xpath "//*[@id='cse']" to be present
     Then element with xpath "//*[@id='cse']" should contain text "Behavior Driven Development"
-
-
+  
+ @predefined6
+ Scenario: Steps for GiveWater
+   Given I open url "https://www.givewater.com"
+   Then I should see page title contains "giveWater Search Engine"
+   And I wait for element with xpath "//div[@class='pum-content popmake-content']" to be present
+   Then I click on element using JavaScript with xpath "//button[@class='pum-close popmake-close']"
+   Then element with xpath "//input[@id='site-search']" should be present
+   Then I type "Verification" into element with xpath "//input[@id='site-search']"
+   And I click on element with xpath "//button[@id='button-addon2']"
+   Then I should see page title contains "GiveWater"
+   Then I wait for element with xpath "//*[@class='mainline-results mainline-results__web']" to be present
+   Then element with xpath "//*[@class='mainline-results mainline-results__web']" should contain text "Verification"
 
