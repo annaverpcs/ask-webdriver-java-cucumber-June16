@@ -1,4 +1,4 @@
-@predefined
+@predefined @regression
 Feature: Search Engine exercise
 
   @predefined1

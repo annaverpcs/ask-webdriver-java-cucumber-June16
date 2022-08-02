@@ -2,7 +2,7 @@
 # https://jira.portnov.com/browse/ACB-8
 # Author : Anna Verkhovskaya
 
-@cucumber
+@cucumber @regression
 Feature: Quote Test Scenarios
   # Validate responsive UI behavior
   @cucumber1
