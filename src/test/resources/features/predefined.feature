@@ -9,7 +9,7 @@ Feature: Search Engine exercise
     When I type "Verification" into element with xpath "//input[@name='q']"
     Then I click on element using JavaScript with xpath "(//input[@name='btnK'])[1]"
     Then I wait for element with xpath "//*[@id='res']" to be present
-    Then element with xpath "//*[@id='res']" should contain text "Cucumber"
+    Then element with xpath "//*[@id='res']" should contain text "Verification"
 
 #scenario for http://gibiru.com
   @predefined2
@@ -32,7 +32,7 @@ Feature: Search Engine exercise
     When I type "Verification" into element with xpath "//input[@name='query']"
     Then I click on element with xpath "//button[@class='search-submit']"
     Then I wait for element with xpath "//*[@class='web-results']" to be present
-    Then element with xpath "//*[@class='web-results']" should contain text "Behavior Driven Development"
+    Then element with xpath "//*[@class='web-results']" should contain text "Verification"
  # scenario for Duckduckgo
   @predefined4
   Scenario: Predefined steps for Duckduckgo
@@ -42,7 +42,7 @@ Feature: Search Engine exercise
     When I type "Verification" into element with xpath "//input[@id='search_form_input_homepage']"
     Then I click on element with xpath "//input[@id='search_button_homepage']"
     Then I wait for element with xpath "//*[@class='cw']" to be present
-    Then element with xpath "//*[@class='cw']" should contain text "Behavior Driven Development"
+    Then element with xpath "//*[@class='cw']" should contain text "Verification"
   # scenario for Wiki
   @predefined5
   Scenario: Predefined steps for Wiki
@@ -56,7 +56,7 @@ Feature: Search Engine exercise
     Then I should see page title as "Wiki.com"
     Then I switch to iframe with xpath "//iframe[@name='googleSearchFrame']"
     Then I wait for element with xpath "//*[@id='cse']" to be present
-    Then element with xpath "//*[@id='cse']" should contain text "Behavior Driven Development"
+    Then element with xpath "//*[@id='cse']" should contain text "Verification"
   
  @predefined6
  Scenario: Steps for GiveWater
